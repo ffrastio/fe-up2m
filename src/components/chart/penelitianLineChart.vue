@@ -1,8 +1,8 @@
 <script>
-import { Line } from "vue-chartjs";
+import { Bar } from "vue-chartjs";
 
 export default {
-    extends: Line,
+    extends: Bar,
     mounted() {
         this.renderChart(
             {
@@ -61,7 +61,7 @@ export default {
                         label: "MTTE",
                         backgroundColor: "transparent",
                         pointBackgroundColor: "rgb(97,177,90)",
-                        borderColor: "rgb(97,177,90)",
+                        
                         data: [0, 1, 0, 1]
                     },
                     {
@@ -73,7 +73,7 @@ export default {
                     },
                     {
                         label: "MP-WMBK",
-                        backgroundColor: "transparent",
+                        backgroundColor: "rgb(255,206,137)",
                         pointBackgroundColor: "rgb(255,206,137)",
                         borderColor: "rgb(255,206,137)",
                         data: [0, 0, 0, 1]
@@ -94,18 +94,18 @@ export default {
                     position: "bottom",
                     labels: {
                         // fontFamily: 'Poppins'
-                        usePointStyle: true,
+                        // usePointStyle: true,
                     },
                 },
-                elements: {
-                    point: {
-                        pointStyle: "rectRot",
-                        radius: "7"
-                    },
-                    line: {
-                        borderWidth: "2"
-                    }
-                }
+                // elements: {
+                //     point: {
+                //         pointStyle: "rectRot",
+                //         radius: "7"
+                //     },
+                //     line: {
+                //         borderWidth: "2"
+                //     }
+                // }
             }
         );
     }

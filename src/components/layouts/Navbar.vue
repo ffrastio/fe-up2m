@@ -25,7 +25,7 @@
             </div>
             <div
                 v-bind:class="{ hidden: !showMenu, flex: showMenu }"
-                class="lg:flex lg:flex-grow items-center"
+                class="lg:flex  justify-between items-center"
             >
                 <ul
                     class="flex flex-col lg:flex-row list-none justify-end items-center"
@@ -85,10 +85,10 @@
                             </li>
                         </ul>
                     </div>
-                <div
-                    class="border rounded-md border-primary items-center hover:bg-primary text-primary hover:text-white"
+                <div class="lg:ml-12"
                 >
-                    <p class="px-4 py-2">Masuk</p>
+                    <router-link :to="{name : 'Login'}" class="border rounded-md border-primary items-center hover:bg-primary text-primary hover:text-white px-4 py-2">Masuk
+                    </router-link>
                 </div>
                 </ul>
             </div>

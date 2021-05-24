@@ -4,7 +4,7 @@
         <form @submit.prevent="handleSubmit">
             <div class="container mx-auto">
                 <div class=" h-full flex justify-center items-center pt-6">
-                    <div class="w-1/3">
+                    <div class="lg:w-1/3 px-4">
                         <img
                             src="@/assets/img/logo.png"
                             alt="Logo Up2m"

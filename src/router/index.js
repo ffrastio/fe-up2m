@@ -35,6 +35,12 @@ const routes = [
             import(/* webpackChunkName: "about" */ "../views/sources/Penelitian.vue")
     },
     {
+        path: "/pengabdian",
+        name: "Pengabdian",
+        component: () =>
+            import(/* webpackChunkName: "about" */ "../views/sources/Pengabdian.vue")
+    },
+    {
         path: "/login",
         name: "Login",
         component: () =>

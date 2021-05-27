@@ -2,36 +2,35 @@
   <div id="penelitian">
     <Navbar />
     <div class="bg-primary">
-      <div class="block lg:flex items-center px-4 py-4 container mx-auto">
+      <div class="flex items-center px-4 py-4 container mx-auto">
         <h1 class="text-white font-bold text-2xl text-left">
           Penelitian
         </h1>
         <div class="py-4 text-left mx-auto">
           <input
             type="text"
-            v-model="search"
-            placeholder="Search Author . . ."
-            class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-md text-sm focus:outline-none lg:w-96 w-full"
-            @keyup="searchPenelitian"
+            v-model="searchPenelitian"
+            placeholder="Search Author. . ."
+            class="border-2 border-gray-300 bg-white h-10 px-5 lg:pr-16 rounded-md text-sm focus:outline-none lg:w-96 w-40"
           />
         </div>
       </div>
     </div>
 
     <!--START Table -->
-    <section id="table">
+    <section id="table" class="overflow-x-auto w-full">
       <table class="table-responsive">
         <thead>
           <tr>
-            <th class="w-1/2 border">Judul Penelitian</th>
-            <th class="w-1/6 border">Skim Penelitian</th>
-            <th class="w-1/6 border">Ketua Pengusul</th>
-            <th class="w-1/6 border">Anggota</th>
+            <th class="w-1/2 border px-4 py-2">Judul Penelitian</th>
+            <th class="w-1/6 border px-4 py-2">Skim Penelitian</th>
+            <th class="w-1/6 border px-4 py-2">Ketua Pengusul</th>
+            <th class="w-1/6 border px-4 py-2">Anggota</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="penelitian in penelitians" :key="penelitian.id">
-            <td class="border">
+          <tr v-for="penelitian in filteredPenelitian" :key="penelitian.id">
+            <td class="border px-6 py-4">
               <p class="">
                 {{ penelitian.judul }}
               </p>
@@ -50,15 +49,20 @@
             <td class="px-6 py-4 text-center border">
               {{ penelitian.jumlah_anggota }}
             </td>
+            <td class="px-4 py-4 border">
+                <button class="border rounded-md border-primary items-center hover:bg-primary text-primary hover:text-white px-4 py-2">
+                    <router-link :to="{name : 'Login'}">Login</router-link>
+                </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </section>
     <!--END Table -->
     <div class="flex justify-between items-center">
-        <div class="px-8 py-4">
-            <p>Total : {{penelitians.length}}</p>
-        </div>
+      <div class="px-8 py-4">
+        <p>Total : {{ penelitians.length }}</p>
+      </div>
     </div>
     <Footer />
   </div>
@@ -67,7 +71,7 @@
 <script>
 import Navbar from "@/components/layouts/Navbar.vue";
 import Footer from "@/components/layouts/Footer.vue";
-import axios from "axios"
+import axios from "axios";
 export default {
   name: "Penelitian",
   components: {
@@ -76,25 +80,38 @@ export default {
   },
   data() {
     return {
-      search: "",
+      searchPenelitian: "",
       penelitians: [],
     };
-  },
-  methods: {
-    searchPenelitian() {
-      axios
-        .get(
-          "http://admin-be.repo-up2m.com/api/list-penelitian?q=" + this.search
-        )
-        .then((res) => (this.penelitians = res.data.data.data))
-        .catch((err) => console.log(err));
-    },
   },
   mounted() {
     axios
       .get("http://admin-be.repo-up2m.com/api/list-penelitian")
       .then((res) => (this.penelitians = res.data.data.data))
       .catch((err) => console.log(err));
+  },
+  computed: {
+    filteredPenelitian: function() {
+      var penelitian = this.penelitians;
+      var searchPenelitian = this.searchPenelitian;
+
+      if (!searchPenelitian) {
+        return penelitian;
+      }
+
+      searchPenelitian = searchPenelitian.trim().toLowerCase();
+
+      penelitian = penelitian.filter(function(item) {
+        if (item.judul.toLowerCase().indexOf(searchPenelitian) !== -1) {
+          return item;
+        }
+        if (item.nama_ketua_penelitian.toLowerCase().indexOf(searchPenelitian) !== -1) {
+          return item;
+        }
+      });
+
+      return penelitian;
+    },
   },
 };
 </script>

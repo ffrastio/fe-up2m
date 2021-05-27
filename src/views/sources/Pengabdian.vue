@@ -19,7 +19,7 @@
     </div>
 
     <!--START Table -->
-    <section id="table">
+    <section id="table" class="overflow-x-auto w-full">
       <table class="table-responsive">
         <thead>
           <tr>

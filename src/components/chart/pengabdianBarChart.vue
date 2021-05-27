@@ -6,7 +6,7 @@ export default {
     mounted() {
         this.renderChart(
             {
-                labels: ["2017", "2018", "2019", "2020", "2021"],
+                labels: ["2017"],
                 datasets: [
                     {
                         label: "Penelitian Mandiri",

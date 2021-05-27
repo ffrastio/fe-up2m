@@ -1,8 +1,8 @@
 <script>
-import { Bar } from "vue-chartjs";
+import { Line } from "vue-chartjs";
 
 export default {
-    extends: Bar,
+    extends: Line,
     mounted() {
         this.renderChart(
             {
@@ -61,7 +61,7 @@ export default {
                         label: "MTTE",
                         backgroundColor: "transparent",
                         pointBackgroundColor: "rgb(97,177,90)",
-                        
+                        borderColor: "rgb(97,177,90)",
                         data: [0, 1, 0, 1]
                     },
                     {
@@ -73,7 +73,7 @@ export default {
                     },
                     {
                         label: "MP-WMBK",
-                        backgroundColor: "rgb(255,206,137)",
+                        backgroundColor: "transparent",
                         pointBackgroundColor: "rgb(255,206,137)",
                         borderColor: "rgb(255,206,137)",
                         data: [0, 0, 0, 1]
@@ -85,27 +85,25 @@ export default {
                 maintainAspectRatio: false,
                 title: {
                     display: true,
-                    text: "Data Penelitian Internal Per Jurusan",
-                    fontSize: "14",
-                    
+                    text: "Data Pengabdian Internal Per Jurusan",
+                    fontSize: 14
                 },
                 legend: {
-                    
                     position: "bottom",
                     labels: {
-                        // fontFamily: 'Poppins'
-                        // usePointStyle: true,
-                    },
+                        // fontFamily : 'Poppins',
+                        usePointStyle: true,
+                    }
                 },
-                // elements: {
-                //     point: {
-                //         pointStyle: "rectRot",
-                //         radius: "7"
-                //     },
-                //     line: {
-                //         borderWidth: "2"
-                //     }
-                // }
+                elements: {
+                    point: {
+                        pointStyle: "rectRot",
+                        radius: "7"
+                    },
+                    line: {
+                        borderWidth: "2"
+                    }
+                }
             }
         );
     }

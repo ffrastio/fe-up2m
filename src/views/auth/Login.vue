@@ -43,9 +43,7 @@
                             <div class="mt-4">
                                 <p class="mb-3 font-bold">*Note :</p>
                                 <p>
-                                    - Hanya
-                                    <strong class="uppercase">Pimpinan</strong>
-                                    yang dapat melakukan login
+                                    - Pendaftaran hubungi <strong>Admin UP2M</strong> 
                                 </p>
                             </div>
                         </div>

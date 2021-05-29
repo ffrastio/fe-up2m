@@ -84,11 +84,14 @@ export default {
       penelitians: [],
     };
   },
-  mounted() {
-    axios
-      .get("http://admin-be.repo-up2m.com/api/list-penelitian")
-      .then((res) => (this.penelitians = res.data.data.data))
-      .catch((err) => console.log(err));
+  async mounted(){
+    try{
+      let response = await axios.get("http://admin-be.repo-up2m.com/api/list-penelitian")
+      this.penelitians = response.data.data.data
+    }
+    catch(err) {
+      console.log(err)
+    }
   },
   computed: {
     filteredPenelitian: function() {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import './axios'
 import './assets/tailwind.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faBars, faEnvelope, faPhoneSquareAlt, faMapMarkerAlt, faUsers, faFilePdf } from '@fortawesome/free-solid-svg-icons'

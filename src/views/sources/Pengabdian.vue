@@ -95,12 +95,21 @@ export default {
         .catch((err) => console.log(err));
     },
   },
-  mounted() {
-    axios
-      .get("http://admin-be.repo-up2m.com/api/list-pengabdian")
-      .then((res) => (this.pengabdians = res.data.data.data))
-      .catch((err) => console.log(err));
-  },
+  // mounted() {
+  //   axios
+  //     .get("http://admin-be.repo-up2m.com/api/list-pengabdian")
+  //     .then((res) => (this.pengabdians = res.data.data.data))
+  //     .catch((err) => console.log(err));
+  // },
+  async mounted(){
+    try{
+      let response = await axios.get("http://admin-be.repo-up2m.com/api/list-pengabdian")
+      this.pengabdians = response.data.data.data
+    }
+    catch(err) {
+      console.log(err)
+    }
+  }
 };
 </script>
 

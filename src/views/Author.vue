@@ -2,9 +2,10 @@
   <div id="author">
     <Navbar />
     <div class="border-b">
-      <div class="container mx-auto md:px-4 md:py-4">
-        <div class="flex items-center">
-          <div class="hidden md:flex items-center mr-10 ">
+      <div class="container flex px-4">
+        <!-- START Author -->
+        <div class="flex mx-auto items-center">
+          <div class="flex items-center ">
             <div class="block items center mr-4">
               <h1 class="font-semibold block text-2xl">Authors</h1>
               <p>Total : {{ authors.length }}</p>
@@ -12,8 +13,104 @@
             <font-awesome-icon icon="users" size="2x" />
           </div>
         </div>
+        <!-- END Author -->
+        <!-- START Jurusan Kategori dekstop -->
+        <div class="hidden md:flex items-center mx-auto">
+          <div class="block items-center justify-items-center border ">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Informatika & Komputer</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Teknik Mesin</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Administrasi Niaga</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Teknik Sipil</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Akutansi</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Grafika & Penerbitan</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Pascasarjana</p></div>
+          </div>
+          <div class="block items-center justify-items-center border">
+            <img
+              src="@/assets/content/content.png"
+              alt="logoPnj"
+              class="object-cover mx-auto mt-4"
+              style="height: 50px"
+            />
+            <div class="px-4 mb-2"><p>Teknik Elektro</p></div>
+          </div>
+        </div>
+        <!-- END Jurusan Kategori Dekstop -->
+        <!-- START Jurusan Kategori Mobile -->
+        <div class="items-center justify-center overflow-x-auto lg:hidden">
+          <select
+            class="dropdown border-2 rounded-xl border-primary px-1 py-1 mt-3 ml-6 w-40"
+            id="dd"
+          >
+            <option value="" selected="selected">Semua Jurusan</option>
+            <option value="dps3">Administrasi Niaga</option>
+            <option value="dps4">Akutansi</option>
+            <option value="dps2">Teknik Elektro</option>
+            <option value="dps5">Teknik Grafika & Penerbitan</option>
+            <option value="dps1">Teknik Informatika & Komputer</option>
+            <option value="dps5">Teknik Mesin</option>
+            <option value="dps5">Pascasarjana</option>
+            <option value="dps5">Teknik Sipil</option>
+          </select>
+        </div>
+        <!-- END Jurusan Kategori Mobile -->
       </div>
     </div>
+    <!-- START Search Author -->
     <div class="container mx-auto px-4 py-4 text-left flex">
       <input
         type="text"
@@ -23,70 +120,63 @@
         @keyup="searchAuthor"
       />
     </div>
+    <!-- END Search Author -->
     <div class=" flex items-center ">
       <div class="overflow-x-auto w-full">
-        <!-- Table -->
-        <table
-          class="mx-auto w-full whitespace-nowrap rounded-lg bg-white divide-y  overflow-x-auto"
-        >
-          <thead class="bg-gray-50">
-            <tr class="text-gray-600 text-left">
-              <th class="font-semibold text-sm uppercase px-6 py-4 text-center w-1/2">
-                author
-              </th>
-              <th class="font-semibold text-sm uppercase px-6 py-4 text-center">
-                penelitian
-              </th>
-              <th class="font-semibold text-sm uppercase px-6 py-4 text-center">
-                ketua
-              </th>
-              <th class="font-semibold text-sm uppercase px-6 py-4 text-center">
-                anggota
-              </th>
+        <!-- START Table -->
+        <table class="min-h-screen">
+          <thead>
+            <tr>
+              <th class="w-1/4 border px-4 py-2">Author</th>
+              <th class="w-1/2 border px-4 py-2">Penelitian</th>
+              <th class="w-1/2 border px-4 py-2">Pengabdian</th>
+              <th class="w-1/2 border px-4 py-2">Total</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-gray-200">
+          <tbody>
             <tr v-for="author in authors" :key="author.id">
-              <td class="px-4 py-4 w-1/2">
-                <div class="flex items-center space-x-3">
-                  <div class="inline-flex w-20 h-20">
+              <td class="border px-6 py-4 mx-auto">
+                <div class="flex items-center">
+                  <div class="flex w-20 h-20">
                     <img
                       class="w-20 h-20 object-cover rounded-full"
-                      alt="User avatar"
-                      src="https://source.unsplash.com/1600x900/?woman"
+                      alt="Foto dosen"
+                      :src="author.avatar"
                     />
                   </div>
-                  <div>
-                    <p class="text-left">
-                      {{ author.judul }}
+                  <div class="items-center">
+                    <p class="text-center">
+                      {{ author.name }}
                     </p>
                     <p>
-                      Teknik Informatika
+                      {{ author.jurusan }}
                     </p>
                     <p
                       class="text-gray-500 text-sm font-semibold tracking-wide"
                     >
-                      123456789
+                      {{ author.NIDN }}
                     </p>
                   </div>
                 </div>
               </td>
-              <td class="px-6 py-4">
+
+              <td class="px-6 py-4 border">
                 <p class="text-gray-500 text-sm font-semibold tracking-wide">
-                  {{ author.skimPenelitian }}
+                  {{ author.count_penelitian }}
                 </p>
               </td>
-              <td class="px-6 py-4 text-center">
+              <td class="px-6 py-4 text-center border">
                 <p class="text-gray-500 text-sm font-semibold tracking-wide">
-                  {{ author.ketuaPengusul }}
+                  {{ author.count_pengabdian }}
                 </p>
               </td>
-              <td class="px-6 py-4 text-center">
-                {{ author.anggota }}
+              <td class="px-6 py-4 text-center border">
+                {{ author.count_pengabdian }}
               </td>
             </tr>
           </tbody>
         </table>
+        <!-- END Table -->
       </div>
     </div>
 
@@ -113,18 +203,15 @@ export default {
   methods: {
     searchAuthor() {
       axios
-        .get(
-          "http://admin-be.repo-up2m.com/api/list-penelitian?q=" +
-            this.search
-        )
+        .get("http://admin-be.repo-up2m.com/api/list-author?q=" + this.search)
         .then((res) => (this.authors = res.data.data.data))
         .catch((err) => console.log(err));
     },
   },
   mounted() {
     axios
-      .get("http://admin-be.repo-up2m.com/api/list-penelitian")
-      .then((res) => (this.authors = res.data.data.data))
+      .get("http://localhost:3000/author")
+      .then((res) => (this.authors = res.data))
       .catch((err) => console.log(err));
   },
 };

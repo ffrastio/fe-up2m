@@ -47,10 +47,51 @@
     <div
       class="bg-gray-200 px-4 py-4 grid grid-cols-1 gap-2 md:grid-cols-2 mb-4 animate-popup"
     >
+    <div class="bg-white text-left">
+      <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+    <option value="" selected="selected">Pilih Tahun</option>
+    <option value="dps1">2017</option>
+    <option value="dps2">2018</option>
+    <option value="dps3">2019</option>
+    <option value="dps4">2020</option>
+    <option value="dps5">2021</option>
+</select>
       <LineChart1 class="bg-white rounded" />
+    </div>
+    <div class="bg-white text-left">
+      <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+    <option value="" selected="selected">Pilih Tahun</option>
+    <option value="dps1">2017</option>
+    <option value="dps2">2018</option>
+    <option value="dps3">2019</option>
+    <option value="dps4">2020</option>
+    <option value="dps5">2021</option>
+</select>
       <LineChart2 class="bg-white rounded" />
+    </div>
+    <div class="bg-white text-left">
+      <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+    <option value="" selected="selected">Pilih Tahun</option>
+    <option value="dps1">2017</option>
+    <option value="dps2">2018</option>
+    <option value="dps3">2019</option>
+    <option value="dps4">2020</option>
+    <option value="dps5">2021</option>
+</select>
       <BarChart1 class="bg-white rounded" />
+    </div>
+    <div class="bg-white text-left">
+      <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+    <option value="" selected="selected">Pilih Tahun</option>
+    <option value="dps1">2017</option>
+    <option value="dps2">2018</option>
+    <option value="dps3">2019</option>
+    <option value="dps4">2020</option>
+    <option value="dps5">2021</option>
+</select>
       <BarChart2 class="bg-white rounded" />
+    </div>
+
     </div>
     <!-- Ends Data Statistik -->
     <Footer />

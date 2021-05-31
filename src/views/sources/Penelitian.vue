@@ -31,7 +31,7 @@
         <tbody>
           <tr v-for="penelitian in filteredPenelitian" :key="penelitian.id">
             <td class="border px-6 py-4">
-              <p class="">
+              <p class="text-left">
                 {{ penelitian.judul }}
               </p>
             </td>

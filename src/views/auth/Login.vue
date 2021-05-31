@@ -2,8 +2,8 @@
     <div id="login">
         <Navbar />
         <form @submit.prevent="handleSubmit">
-            <div class="container mx-auto">
-                <div class=" h-full flex justify-center items-center pt-6">
+            <div class="container mx-auto py-32 md:py-44">
+                <div class="flex h-full justify-center items-center pt-6">
                     <div class="lg:w-1/3 px-4">
                         <img
                             src="@/assets/img/logo.png"
@@ -20,7 +20,7 @@
                                 <input
                                     type="text"
                                     placeholder="Masukkan Email Anda . . ."
-                                    class="border rounded-lg px-4 py-2 w-full"
+                                    class="border rounded-lg px-4 py-2 w-full focus:outline-none"
                                     v-model="email"
                                 />
                             </div>
@@ -31,7 +31,7 @@
                                 <input
                                     type="Password"
                                     placeholder="Masukkan Password Anda . . ."
-                                    class="border rounded-lg px-4 py-2 w-full"
+                                    class="border rounded-lg px-4 py-2 w-full focus:outline-none"
                                     v-model="password"
                                 />
                             </div>

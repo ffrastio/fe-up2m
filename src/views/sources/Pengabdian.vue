@@ -32,7 +32,7 @@
         <tbody>
           <tr v-for="pengabdian in pengabdians" :key="pengabdian.id" class="hover:bg-gray-100 border">
             <td class="border">
-              <p class="">
+              <p class="text-left">
                 {{ pengabdian.judul }}
               </p>
             </td>

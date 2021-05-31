@@ -16,7 +16,7 @@
         <!-- END Author -->
         <!-- START Jurusan Kategori dekstop -->
         <div class="hidden md:flex items-center mx-auto">
-          <div class="block items-center justify-items-center border ">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110 ">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -25,7 +25,7 @@
             />
             <div class="px-4 mb-2"><p>Informatika & Komputer</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -34,7 +34,7 @@
             />
             <div class="px-4 mb-2"><p>Teknik Mesin</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -43,7 +43,7 @@
             />
             <div class="px-4 mb-2"><p>Administrasi Niaga</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -52,7 +52,7 @@
             />
             <div class="px-4 mb-2"><p>Teknik Sipil</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -61,7 +61,7 @@
             />
             <div class="px-4 mb-2"><p>Akutansi</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -70,7 +70,7 @@
             />
             <div class="px-4 mb-2"><p>Grafika & Penerbitan</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"
@@ -79,7 +79,7 @@
             />
             <div class="px-4 mb-2"><p>Pascasarjana</p></div>
           </div>
-          <div class="block items-center justify-items-center border">
+          <div class="block items-center justify-items-center border transform duration-500 transition hover:scale-110">
             <img
               src="@/assets/content/content.png"
               alt="logoPnj"

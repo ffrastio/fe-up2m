@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "generate": "json-server ./db/author.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -15,7 +16,10 @@
     "autoprefixer": "^9",
     "chart.js": "^3.2.1",
     "core-js": "^3.6.5",
+    "faker": "^5.5.3",
     "font-awesome": "^4.7.0",
+    "json-server": "^0.16.3",
+    "lodash": "^4.17.21",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "vue": "^2.6.11",

@@ -29,72 +29,74 @@
           <img
             src="@/assets/content/header.png"
             alt="Header"
-            class="img-header"
+            class="object-cover mx-auto img-header"
           />
         </div>
       </div>
     </section>
     <!-- Ends Section Hero -->
     <!-- Start Data Statistik -->
-    <div class="flex justify-between items-center">
-      <div class="text-xl text-left font-bold py-4 px-4">Data Statistik</div>
-      <div class="px-4">
-        <button
-          href="#"
-          id="downloadPdf"
-          class="bg-primary hover:bg-primary-200 text-white hover:text-white rounded shadow hover:shadow-lg py-2 px-2 border"
-          @click="exportToPDF(0)"
-        >
-          <font-awesome-icon icon="file-pdf" class="mr-2" />Download Report
-        </button>
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="text-xl text-left font-bold py-4 px-4">Data Statistik</div>
+        <div class="px-4">
+          <button
+            href="#"
+            id="downloadPdf"
+            class="bg-primary hover:bg-primary-200 text-white hover:text-white rounded-xl shadow hover:shadow-lg py-2 px-2 border"
+            @click="exportToPDF(0)"
+          >
+            <font-awesome-icon icon="file-pdf" class="mr-2" />Download
+          </button>
+        </div>
       </div>
-    </div>
-    <div
-      class="bg-gray-200 px-4 py-4 grid grid-cols-1 gap-2 md:grid-cols-2 mb-4 animate-popup"
-    >
-      <div class="bg-white text-left">
-        <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
-          <option value="" selected="selected">Pilih Tahun</option>
-          <option value="dps1">2017</option>
-          <option value="dps2">2018</option>
-          <option value="dps3">2019</option>
-          <option value="dps4">2020</option>
-          <option value="dps5">2021</option>
-        </select>
-        <LineChart1 class="bg-white rounded" id="chart1" />
-      </div>
-      <div class="bg-white text-left">
-        <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
-          <option value="" selected="selected">Pilih Tahun</option>
-          <option value="dps1">2017</option>
-          <option value="dps2">2018</option>
-          <option value="dps3">2019</option>
-          <option value="dps4">2020</option>
-          <option value="dps5">2021</option>
-        </select>
-        <LineChart2 class="bg-white rounded" id="chart2" />
-      </div>
-      <div class="bg-white text-left">
-        <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
-          <option value="" selected="selected">Pilih Tahun</option>
-          <option value="dps1">2017</option>
-          <option value="dps2">2018</option>
-          <option value="dps3">2019</option>
-          <option value="dps4">2020</option>
-          <option value="dps5">2021</option>
-        </select>
-        <BarChart1 class="bg-white rounded" id="chart3" />
-      </div>
-      <div class="bg-white text-left">
-        <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
-          <option value="" selected="selected">Pilih Tahun</option>
-          <option value="dps1">2017</option>
-          <option value="dps2">2018</option>
-          <option value="dps3">2019</option>
-          <option value="dps4">2020</option>
-          <option value="dps5">2021</option>
-        </select>
-        <BarChart2 class="bg-white rounded" id="chart4" />
+      <div
+        class="bg-gray-200 px-4 py-4 grid grid-cols-1 gap-2 md:grid-cols-2 mb-4 animate-popup"
+      >
+        <div class="bg-white text-left">
+          <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+            <option value="" selected="selected">Pilih Tahun</option>
+            <option value="dps1">2017</option>
+            <option value="dps2">2018</option>
+            <option value="dps3">2019</option>
+            <option value="dps4">2020</option>
+            <option value="dps5">2021</option>
+          </select>
+          <LineChart1 class="bg-white rounded" id="chart1" />
+        </div>
+        <div class="bg-white text-left">
+          <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+            <option value="" selected="selected">Pilih Tahun</option>
+            <option value="dps1">2017</option>
+            <option value="dps2">2018</option>
+            <option value="dps3">2019</option>
+            <option value="dps4">2020</option>
+            <option value="dps5">2021</option>
+          </select>
+          <LineChart2 class="bg-white rounded" id="chart2" />
+        </div>
+        <div class="bg-white text-left">
+          <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+            <option value="" selected="selected">Pilih Tahun</option>
+            <option value="dps1">2017</option>
+            <option value="dps2">2018</option>
+            <option value="dps3">2019</option>
+            <option value="dps4">2020</option>
+            <option value="dps5">2021</option>
+          </select>
+          <BarChart1 class="bg-white rounded" id="chart3" />
+        </div>
+        <div class="bg-white text-left">
+          <select class="dropdown border rounded px-1 py-1 mt-2 ml-6" id="dd">
+            <option value="" selected="selected">Pilih Tahun</option>
+            <option value="dps1">2017</option>
+            <option value="dps2">2018</option>
+            <option value="dps3">2019</option>
+            <option value="dps4">2020</option>
+            <option value="dps5">2021</option>
+          </select>
+          <BarChart2 class="bg-white rounded" id="chart4" />
+        </div>
       </div>
     </div>
     <!-- Ends Data Statistik -->
@@ -111,7 +113,7 @@ import LineChart2 from "@/components/chart/pengabdianLineChart.vue";
 import BarChart1 from "@/components/chart/penelitianBarChart.vue";
 import BarChart2 from "@/components/chart/pengabdianBarChart.vue";
 import Exporter from "vue-chartjs-exporter";
-import { jsPDF } from "jspdf"
+import { jsPDF } from "jspdf";
 export default {
   name: "Home",
   components: {
